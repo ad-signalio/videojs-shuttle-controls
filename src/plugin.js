@@ -122,7 +122,7 @@ class ShuttleControls extends Plugin {
     const buttonDom = videojs.dom.$('.vjs-play-control');
     const techDom = videojs.dom.$('.vjs-tech');
     const playControlHandler = () => {
-      if (this.parentElement.parentElement.id == _this2.player.id_) {
+      if (techDom.parentNode.id == this.player.id) {
         const hasPaused = videojs.dom.hasClass(techDom.parentNode, 'vjs-paused');
         const currentPlaybackRate = this.currentPlaybackRate;
         const isNegativePlaying = this.isPlaying && currentPlaybackRate < 0 && hasPaused;
